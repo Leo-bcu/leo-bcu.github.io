@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>博客管理后台 | kaiyuli.top</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f6fa; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; color: #333; }
+    .loading { text-align: center; }
+    .loading h1 { font-size: 20px; margin-bottom: 8px; }
+    .loading p { color: #888; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">
+    <h1>博客管理后台</h1>
+    <p>正在加载编辑器，请稍候…</p>
+  </div>
+  <script
+    src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"
+    onload="document.getElementById('loading').style.display='none'"
+    onerror="document.getElementById('loading').innerHTML='<h1>加载失败</h1><p>无法加载编辑器脚本，请检查网络后刷新重试。</p>'"
+  ></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+# Sveltia CMS / Decap CMS 配置
+# 网页端博客添加器：访问 https://kaiyuli.top/admin/ 登录 GitHub 后即可在线写博客
+#
+# 使用前需要完成 OAuth 配置：
+# 1. 在 GitHub 创建 OAuth App（见仓库 README 或部署说明）
+# 2. 部署 sveltia-cms-auth Cloudflare Worker 获取授权代理地址
+# 3. 将下方 base_url 替换为你的 Worker 地址，例如：
+#    base_url: https://sveltia-cms-auth.<你的子域>.workers.dev
+
+backend:
+  name: github
+  repo: Leo-bcu/academic-homepage
+  branch: main
+  # TODO: 部署完 OAuth 代理后取消注释并填入你的 Worker 地址
+  base_url: https://sveltia-cms-auth.shamim1232221.workers.dev/
+
+site_url: https://kaiyuli.top
+display_url: https://kaiyuli.top
+locale: zh_Hans
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "posts"
+    label: "博客文章"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["date", "title"]
+    editor:
+      preview: false
+    fields:
+      - label: "标题"
+        name: "title"
+        widget: "string"
+      - label: "日期"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        default: "{{now}}"
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        required: false
+        default: ["Blog", "Post"]
+      - label: "摘要"
+        name: "excerpt"
+        widget: "text"
+        required: false
+      - label: "正文"
+        name: "body"
+        widget: "markdown"
