@@ -1,8 +1,8 @@
 /* =============================================================
  * Blog Password Protection (New Feature)
  * -------------------------------------------------------------
- * - 密码为固定值，以 SHA-256 哈希形式存储（非明文）
- * - 对用户输入进行 SHA-256 后直接与存储哈希对比
+ * - 密码为多组固定值，每一组均以 SHA-256 哈希形式存储（非明文）
+ * - 对用户输入进行 SHA-256 后，只要命中哈希数组中的任意一个即通过
  * - 全局毛玻璃覆盖层 + 密码输入框 + 确认按钮 + 返回按钮
  * - 验证成功后将状态存入 sessionStorage（会话级）
  * - 本文件为新增内容，不修改任何既有功能代码
@@ -11,17 +11,28 @@
     'use strict';
 
     /* ----------------------------------------------------------
-     * 加密存储的密码（SHA-256 哈希值）
-     *   对应明文：BlogProtect2025
-     *   如需修改密码，可用以下命令生成新哈希：
+     * 加密存储的密码列表（SHA-256 哈希数组）——命中任意一个即通过验证
+     *   当前明文对应关系（可自由增删）：
+     *     [0] BlogProtect2025   （主访问密码）
+     *     [1] GuestReader2026   （访客阅读密码）
+     *     [2] AdminAccess#2025  （管理员密码）
+     *     [3] ResearchLab@2026  （实验室成员密码）
+     *   如需新增/修改密码，可用以下命令生成新哈希：
      *     echo -n "你的新密码" | shasum -a 256 | awk '{print $1}'
-     *   然后将下方 BLOG_PROTECT_HASH 替换为新值即可。
+     *   然后把结果字符串追加到 BLOG_PROTECT_HASHES 数组即可。
      * ---------------------------------------------------------- */
-    var BLOG_PROTECT_HASH = 'e335fb54d78c7cfe6298b0effb567529c301f51b9ee2667e9ed22ee64f2e3536';
-    // 可选：加盐（为了简单此处保持空串，可自定义任意字符串增强单向性）
+    var BLOG_PROTECT_HASHES = [
+        'e335fb54d78c7cfe6298b0effb567529c301f51b9ee2667e9ed22ee64f2e3536',
+        '843fbbcf767a3889a070ec787a8b4e61825a4efe86e7062fd080f4099dfcafcc',
+        'e231fb06fe8e61a2809001f2d9fac93a30e04ebec85f3e6d0d5655dd5b0d6130',
+        '9d4bce96308ec756d0ff89fa6d884f682b1220f49e8c1fc79f4a10e3cfe00f01'
+    ];
+    // 可选：加盐（保持空串即可，可自定义任意字符串增强单向性；
+    //       注意：修改后之前的所有哈希都需以相同盐值重新生成）
     var BLOG_PROTECT_SALT = '';
 
-    var STORAGE_KEY = 'blog_protect_unlocked_' + (BLOG_PROTECT_HASH.slice(0, 8));
+    // STORAGE_KEY 基于第一个哈希生成，便于密码轮换后旧会话自动失效
+    var STORAGE_KEY = 'blog_protect_unlocked_' + (BLOG_PROTECT_HASHES[0] || '').slice(0, 8);
 
     /* ---------- DOM refs ---------- */
     var overlay, input, form, errorBox, backBtn, toggleBtn, submitBtn;
@@ -66,11 +77,12 @@
         if (errorBox) errorBox.style.display = 'none';
     }
 
-    /* ---------- Verify password ---------- */
+    /* ---------- Verify password (multi-hash) ---------- */
     function verifyPassword(plain) {
         var toHash = (BLOG_PROTECT_SALT ? BLOG_PROTECT_SALT + '::' : '') + plain;
         return sha256(toHash).then(function (h) {
-            return h === BLOG_PROTECT_HASH;
+            // 命中哈希数组中任意一个即通过（支持多密码）
+            return BLOG_PROTECT_HASHES.indexOf(h) !== -1;
         });
     }
 

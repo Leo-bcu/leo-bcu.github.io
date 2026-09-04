@@ -120,11 +120,11 @@
     margin: 0 0 28px;
 }
 
-/* Password input */
-.blog-protect-form {
-    margin: 0;
-}
-
+/* Password input
+ * —— <input> 已使用 Bootstrap 系统自带的 .form-control，
+ *    此处仅叠加图标左右 padding 与自定义 focus 光晕，其余样式（
+ *    字体/字号/行高/圆角/边框/高度/transition 等）全部复用系统既有格式。
+ */
 .blog-protect-input-group {
     position: relative;
     margin-bottom: 16px;
@@ -132,54 +132,47 @@
 
 .blog-protect-input-icon {
     position: absolute;
-    left: 16px;
+    left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: #9ca3af;
+    color: #6c757d;
     font-size: 14px;
     pointer-events: none;
+    z-index: 4; /* 位于 form-control 之上 */
 }
 
-.blog-protect-input {
-    width: 100%;
-    padding: 14px 46px 14px 44px;
-    font-size: 1rem;
-    border: 1.5px solid rgba(200, 208, 220, 0.8);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #1f2937;
-    transition: all 0.2s ease;
-    outline: none;
-    box-sizing: border-box;
+.blog-protect-input.form-control {
+    /* 为左右图标/按钮留出空间；其余 box-model 属性由 Bootstrap form-control 提供 */
+    padding-left: 38px;
+    padding-right: 44px;
+    background: rgba(255, 255, 255, 0.85);
 }
 
-.blog-protect-input::placeholder {
-    color: #9ca3af;
-}
-
-.blog-protect-input:focus {
-    border-color: #667eea;
+.blog-protect-input.form-control:focus {
+    /* 保留系统 form-control 的 focus 边框颜色，只叠加一层柔和光晕 */
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.2);
+    border-color: #80bdff;
     background: #fff;
-    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
 }
 
 .blog-protect-toggle-pw {
     position: absolute;
-    right: 12px;
+    right: 6px;
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    color: #9ca3af;
+    color: #6c757d;
     cursor: pointer;
-    padding: 6px 8px;
+    padding: 6px 10px;
     border-radius: 6px;
+    z-index: 4;
     transition: color 0.2s ease, background 0.2s ease;
 }
 
 .blog-protect-toggle-pw:hover {
-    color: #4b5563;
-    background: rgba(156, 163, 175, 0.1);
+    color: #495057;
+    background: rgba(108, 117, 125, 0.1);
 }
 
 /* Error message */
@@ -274,11 +267,13 @@ body.blog-protect-locked {
     overflow: hidden !important;
 }
 
-body.blog-protect-locked main,
-body.blog-protect-locked .container-lg {
-    filter: blur(8px);
-    transition: filter 0.3s ease;
-}
+/*
+ * 注意：不要对 main / .container-lg 施加 filter: blur()
+ * ——父容器的 filter 会创建新层叠上下文，导致 fixed 定位的
+ *   毛玻璃遮罩和 modal 也被一并模糊，最终连密码框都看不清。
+ * 正确做法：仅依靠 overlay 内部 .blog-protect-blur-layer 的
+ *   backdrop-filter（它只模糊遮罩背后的内容，不影响遮罩上方的 modal）。
+ */
 
 /* Responsive */
 @media (max-width: 480px) {
