@@ -3,9 +3,9 @@ secondary_name: ""
 navbar_name: "Kaiyu Li"
 
 positions:
-- name: Title or Position
-- name: Affiliation Name
-  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+# - name: Title or Position
+- name: M.S. Student
+  logo: /assets/images/badges/bcu.png  # Logo is optional
 
 
 email: "kaiyuli2025@163.com"

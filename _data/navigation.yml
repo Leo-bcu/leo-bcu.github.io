@@ -7,7 +7,7 @@ pages:
 #   url: /index_layout2
 - name: Publications
   url: /publications
+- name: Showcase
+  url: https://github.com/Leo-bcu/PaperPilot
 - name: Blog
   url: /blog
-- name: Showcase
-  url: /showcase
