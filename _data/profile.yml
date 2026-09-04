@@ -35,16 +35,16 @@ portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
+- name: Beijing City University
+  logo: /assets/images/badges/bcu.png
   position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+    School of Information Technology  <br/>
+    M.S. Student 
+  date: Sep. 2025 - present
+- name: Shandong University of Technology
+  logo: /assets/images/badges/sdut.png
+  position: B.S. in Software Engineering
+  date: Sep. 2020 - Jun. 2024
 
 # experience:
 # - name: Peking University
