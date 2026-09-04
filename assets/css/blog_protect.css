@@ -240,7 +240,7 @@
 
 .blog-protect-btn-submit:hover {
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 6px 16px rgba(85, 93, 131, 0.4);
     filter: brightness(1.05);
 }
 
