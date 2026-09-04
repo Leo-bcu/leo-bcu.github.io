@@ -1,0 +1,43 @@
+<!-- Blog Password Protect Modal (New Feature) -->
+<div id="blog-protect-overlay" class="blog-protect-overlay" style="display: none;">
+    <div class="blog-protect-blur-layer"></div>
+    <div class="blog-protect-modal-wrapper">
+        <div class="blog-protect-modal">
+            <div class="blog-protect-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2 class="blog-protect-title">Blog 访问验证</h2>
+            <p class="blog-protect-subtitle">请输入访问密码以查看内容</p>
+            <form id="blog-protect-form" class="blog-protect-form" autocomplete="off">
+                <div class="blog-protect-input-group">
+                    <i class="fas fa-key blog-protect-input-icon"></i>
+                    <input
+                        type="password"
+                        id="blog-protect-password"
+                        class="blog-protect-input"
+                        placeholder="请输入密码"
+                        autocomplete="new-password"
+                        spellcheck="false"
+                    />
+                    <button type="button" id="blog-protect-toggle-pw" class="blog-protect-toggle-pw" tabindex="-1">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div id="blog-protect-error" class="blog-protect-error" style="display: none;">
+                    <i class="fas fa-exclamation-circle"></i> 密码错误，请重试
+                </div>
+                <div class="blog-protect-buttons">
+                    <button type="button" id="blog-protect-back" class="blog-protect-btn blog-protect-btn-back">
+                        <i class="fas fa-arrow-left"></i> 返回
+                    </button>
+                    <button type="submit" id="blog-protect-submit" class="blog-protect-btn blog-protect-btn-submit">
+                        <i class="fas fa-check"></i> 确认
+                    </button>
+                </div>
+            </form>
+            <p class="blog-protect-hint">
+                <i class="fas fa-shield-alt"></i> 本站 Blog 内容受密码保护
+            </p>
+        </div>
+    </div>
+</div>
