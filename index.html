@@ -35,5 +35,14 @@ navbar_title: Home
         title='<i class="fas fa-star"></i> Selected Publications'
         %}
         {% endif %}
+
+        {% if site.data.display.homepage.show_selected_projects %}
+        {% assign projs = site.projects | sort: "date" | reverse | where: "selected", true %}
+        {%
+        include widgets/project_card.html
+        projects=projs
+        title='<i class="fas fa-star"></i> Selected Projects'
+        %}
+        {% endif %}
     </div>
 </div>
