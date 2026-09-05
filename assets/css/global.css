@@ -116,6 +116,14 @@ html.lang-zh body {
                  sans-serif;
 }
 
+/* 中文模式：标题使用特粗字重（思源黑体 Black 900），实现“特粗黑体标题”效果 */
+html.lang-zh h1, html.lang-zh h2, html.lang-zh h3,
+html.lang-zh h4, html.lang-zh h5, html.lang-zh h6,
+html.lang-zh .h1, html.lang-zh .h2, html.lang-zh .h3,
+html.lang-zh .h4, html.lang-zh .h5, html.lang-zh .h6 {
+    font-weight: 900;
+}
+
 /* 头部语言切换开关（复用系统样式：卡片圆角 0.8rem、shadow-sm 阴影、bootstrap 主色与 muted 文字色） */
 .lang-toggle {
     display: inline-flex;
