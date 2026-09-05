@@ -131,10 +131,10 @@ html.lang-zh body {
     border: none;
     background-color: transparent;
     font-family: inherit;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     line-height: 1.5;
-    padding: 0.05rem 0.65rem;
+    padding: 0.05rem 0.5rem;
     border-radius: 0.65rem;
     color: #6c757d; /* 同 .text-muted */
     cursor: pointer;

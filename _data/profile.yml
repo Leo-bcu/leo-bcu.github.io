@@ -1,4 +1,5 @@
 primary_name: "Kaiyu Li"
+primary_name_zh: "李开宇"  # 中文名：填写后中文界面显示中文名，留空则显示 Kaiyu Li
 secondary_name: ""
 navbar_name: "Kaiyu Li"
 
@@ -55,18 +56,21 @@ education:
     信息技术学院  <br/>
     硕士研究生
   date: Sep. 2025 - present
+  date_zh: 2025年9月 至今
 - name: Shandong University of Technology
   name_zh: 山东理工大学
   logo: /assets/images/badges/sdut.png
   position: B.S. in Software Engineering
   position_zh: 软件工程专业 学士
   date: Sep. 2020 - Jun. 2024
+  date_zh: 2020年9月 - 2024年6月
 
 # experience:
 # - name: Peking University
 #   logo: /assets/images/badges/PKU_red.png
 #   position: Research Intern
 #   date: Sep. 2019 - Jul. 2021
+#   date_zh: 2019年9月 - 2021年7月
 
 awards:
 - name: Award Name 2

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light fixed-top mb-5 shadow-sm">
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
-        <a class="navbar-brand"><strong>{{site.data.profile.navbar_name}}</strong></a>
+        <a class="navbar-brand"><strong><span class="lang-en">{{site.data.profile.navbar_name}}</span><span class="lang-zh">{{ site.data.profile.primary_name_zh | default: site.data.profile.navbar_name }}</span></strong></a>
         <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-map"></i> <span data-zh="菜单">Menu</span>
         </button>
@@ -15,7 +15,7 @@
                 <li class="nav-item d-flex align-items-center py-1">
                     <div class="lang-toggle" role="group" aria-label="Language / 语言">
                         <button type="button" class="lang-btn" data-lang-set="en" aria-pressed="false">EN</button>
-                        <button type="button" class="lang-btn" data-lang-set="zh" aria-pressed="false">中文</button>
+                        <button type="button" class="lang-btn" data-lang-set="zh" aria-pressed="false">中</button>
                     </div>
                 </li>
             </ul>

@@ -22,14 +22,14 @@
                 </div>
                 <div class="row">
                     <div class="col text-center h4">
-                        {{ site.data.profile.primary_name }}
+                        <span class="lang-en">{{ site.data.profile.primary_name }}</span><span class="lang-zh">{{ site.data.profile.primary_name_zh | default: site.data.profile.primary_name }}</span>
                     </div>
                 </div>
 
                 <div class="row small">
                     <div class="col text-center">
                         {% for position in site.data.profile.positions %}
-                        {{ position.name }}<br/>
+                        <span class="lang-en">{{ position.name }}</span><span class="lang-zh">{{ position.name_zh | default: position.name }}</span><br/>
                         {% endfor %}
                     </div>
                 </div>
