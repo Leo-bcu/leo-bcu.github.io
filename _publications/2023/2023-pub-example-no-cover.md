@@ -19,4 +19,5 @@ authors:
 links:
   Code: https://github.com/luost26/bubble-visual-hash
   Demo: https://luost26.github.io/bubble-visual-hash
+  ReadMore: https://luost26.github.io/bubble-visual-hash/
 ---
