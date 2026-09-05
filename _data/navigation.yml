@@ -5,10 +5,10 @@ pages:
   url: /
 # - name: Home (Layout 2)
 #   url: /index_layout2
-- name: Publications
-  url: /publications
 - name: Projects
   url: /projects
+- name: Publications
+  url: /publications
 - name: Blog
   url: /blog
 - name: PaperPilot

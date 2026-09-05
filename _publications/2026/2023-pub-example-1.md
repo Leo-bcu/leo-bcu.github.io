@@ -1,7 +1,7 @@
 ---
 title:          "Lorem2026"
 date:           2026-01-05 00:01:00 +0800
-selected:       true
+selected:       false
 pub:            "Nature Communications"
 pub_date:       "2026"
 abstract: >-
