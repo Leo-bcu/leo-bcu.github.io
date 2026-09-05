@@ -97,3 +97,55 @@ div.lazy {
     max-width: 100%;
     height: auto;
 }
+
+/* ===== 中英文切换 (CN/EN toggle) ===== */
+/* 成对渲染的双语文本：仅隐藏非当前语言，当前语言保持原有排版 */
+html.lang-zh .lang-en {
+    display: none !important;
+}
+
+html:not(.lang-zh) .lang-zh {
+    display: none !important;
+}
+
+/* 中文模式：黑体（无衬线），方正系列字体优先，Noto Sans SC 作为网页字体兜底 */
+html.lang-zh body {
+    font-family: "Lato",
+                 "FZLanTingHeiS-R-GB", "FZLanTingHei-L", "方正兰亭黑_GBK", "方正兰亭黑简体",
+                 "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+                 sans-serif;
+}
+
+/* 头部语言切换开关（复用系统样式：卡片圆角 0.8rem、shadow-sm 阴影、bootstrap 主色与 muted 文字色） */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.8rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* 同 .shadow-sm */
+}
+
+.lang-btn {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0.05rem 0.65rem;
+    border-radius: 0.65rem;
+    color: #6c757d; /* 同 .text-muted */
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.lang-btn:hover {
+    color: #495057;
+}
+
+.lang-btn.active {
+    background-color: #007bff; /* 同 .btn-primary */
+    color: #ffffff;
+}

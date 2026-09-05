@@ -3,12 +3,13 @@
         <div class="row my-3">
             <div class="col-6">
                 <div class="text-muted">
-                    <i>Last updated: {{ "now" | date: "%b %Y" }}</i>
+                    <i><span data-zh="最后更新：">Last updated: </span><span class="lang-en">{{ "now" | date: "%b %Y" }}</span><span class="lang-zh">{{ "now" | date: "%Y 年 %-m 月" }}</span></i>
                 </div>
             </div>
             <div class="col-6">
                 <div class="text-right text-muted">
-                    {{ site.data.display.footer_text }}
+                    <span class="lang-en">{{ site.data.display.footer_text }}</span>
+                    <span class="lang-zh">{{ site.data.display.footer_text_zh | default: site.data.display.footer_text }}</span>
                 </div>
             </div>
         </div>

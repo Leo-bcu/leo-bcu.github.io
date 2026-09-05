@@ -5,6 +5,7 @@ navbar_name: "Kaiyu Li"
 positions:
 # - name: Title or Position
 - name: M.S. Student
+  name_zh: 硕士研究生
   logo: /assets/images/badges/bcu.png  # Logo is optional
 
 
@@ -15,6 +16,7 @@ github: Leo-bcu
 #twitter: your_twitter_id  # Do not include the '@' symbol
 wechat_qrcode: /assets/images/etc/wechat.jpg
 wechat_prompt: Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
+wechat_prompt_zh: 添加微信时，请告诉我您的<strong>姓名</strong>和<strong>单位</strong>（当前或曾经）。谢谢！
 #   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
 # linkedin: your-linked-in-id
 # orcid: 0000-0000-0000-0000
@@ -30,20 +32,34 @@ short_bio: >-
     as well as being common in domestic longhair and domestic shorthair cats.
   </p>
 
+short_bio_zh: >-
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">双色猫</a>是一种由白色被毛与其他颜色被毛（例如纯黑色、虎斑色或重点色）相结合的猫。
+  </p>
+  <p>
+    双色猫的被毛图案多种多样：从梵纹（仅头顶与尾巴有颜色）到带有喉部白斑或胸前圆斑的纯色都有。双色被毛见于许多猫的品种中，在家养长毛猫和家养短毛猫中也很常见。
+  </p>
+
 portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
 - name: Beijing City University
+  name_zh: 北京城市学院
   logo: /assets/images/badges/bcu.png
   position: >- 
     School of Information Technology  <br/>
     M.S. Student 
+  position_zh: >- 
+    信息技术学院  <br/>
+    硕士研究生
   date: Sep. 2025 - present
 - name: Shandong University of Technology
+  name_zh: 山东理工大学
   logo: /assets/images/badges/sdut.png
   position: B.S. in Software Engineering
+  position_zh: 软件工程专业 学士
   date: Sep. 2020 - Jun. 2024
 
 # experience:
@@ -54,8 +70,11 @@ education:
 
 awards:
 - name: Award Name 2
+  name_zh: 获奖名称 2
   date: 2024
 - name: Award Name 1 
+  name_zh: 获奖名称 1
   date: 2021
 - name: A quick brown fox jumps over the lazy dog and runs away award
+  name_zh: 敏捷的棕色狐狸跳过懒惰的狗并跑掉奖
   date: 2021

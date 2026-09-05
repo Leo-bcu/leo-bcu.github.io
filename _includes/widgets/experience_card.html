@@ -6,16 +6,16 @@
                     {% if site.data.profile.education %}
                     <div class="col-lg-6">
                         <div class="mx-2 my-1">
-                            <h6>Education</h6>
+                            <h6><span data-zh="教育经历">Education</span></h6>
                             <ul class="list-unstyled mb-1">
                                 {% for item in site.data.profile.education %}
                                 <li class="media mb-1">
                                     <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
                                     <div class="media-body">
-                                        <div>{{ item.name }}</div>
+                                        <div><span class="lang-en">{{ item.name }}</span><span class="lang-zh">{{ item.name_zh | default: item.name }}</span></div>
                                         <div class="small">{{ item.dept }}</div>
                                         <div class="small d-flex">
-                                            <div>{{ item.position }}</div>
+                                            <div><span class="lang-en">{{ item.position }}</span><span class="lang-zh">{{ item.position_zh | default: item.position }}</span></div>
                                             <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
                                         </div>
                                     </div>
@@ -52,12 +52,12 @@
                     {% if site.data.profile.awards %}
                     <div class="col-lg-6">
                         <div class="mx-2 my-1">
-                            <h6>Honors & Awards</h6>
+                            <h6><span data-zh="荣誉奖项">Honors &amp; Awards</span></h6>
                             <ul class="list small pl-3 mb-1">
                                 {% for item in site.data.profile.awards %}
                                 <li>
                                     <div class="d-flex">
-                                        <div>{{ item.name }}</div>
+                                        <div><span class="lang-en">{{ item.name }}</span><span class="lang-zh">{{ item.name_zh | default: item.name }}</span></div>
                                         <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
                                     </div>
                                 </li>

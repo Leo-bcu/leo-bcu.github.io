@@ -2,14 +2,18 @@ pages:
 # NOTE: `name` field must match the `navbar_title` field in the page's front matter to ensure the correct page is highlighted in the navbar.
 #       For example, the `navbar_title` field in `showcase.html` is "Showcase" and the `name` field here should also be "Showcase"
 - name: Home
+  name_zh: 首页
   url: /
 # - name: Home (Layout 2)
 #   url: /index_layout2
 - name: Projects
+  name_zh: 项目
   url: /projects
 - name: Publications
+  name_zh: 论文
   url: /publications
 - name: Blog
+  name_zh: 博客
   url: /blog
 - name: PaperPilot
   url: https://github.com/Leo-bcu/PaperPilot

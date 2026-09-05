@@ -101,11 +101,12 @@
             </div>
             {% if site.data.profile.wechat_prompt %}
             <div class="modal-body p-1">
-                {{ site.data.profile.wechat_prompt }}
+                <span class="lang-en">{{ site.data.profile.wechat_prompt }}</span>
+                <span class="lang-zh">{{ site.data.profile.wechat_prompt_zh | default: site.data.profile.wechat_prompt }}</span>
             </div>
             {% endif %}
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-zh="关闭">Close</button>
             </div>
         </div>
     </div>
