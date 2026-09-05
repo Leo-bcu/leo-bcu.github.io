@@ -91,3 +91,9 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+/* Responsive images inside page content (default layout) */
+.page-content img {
+    max-width: 100%;
+    height: auto;
+}

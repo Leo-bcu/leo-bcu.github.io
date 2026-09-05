@@ -39,3 +39,11 @@ collections:
   - news
   - showcase
   - posts
+
+# Default front matter for posts (auto-apply blog_post layout to CMS-created posts)
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "blog_post"
