@@ -2,7 +2,7 @@
 // 规则：
 //  - [data-zh] 元素：JS 直接替换其文本内容（英文为默认内容，中文存于 data-zh 属性）
 //  - .lang-en / .lang-zh 元素：成对渲染、按语言显示隐藏（用于含 HTML 的富文本）
-//  - 偏好保存在 localStorage，默认英文，不做浏览器语言自动检测
+//  - 偏好保存在 localStorage，默认中文，不做浏览器语言自动检测
 (function () {
     var STORAGE_KEY = 'site-lang';
     var SUPPORTED = ['en', 'zh'];
@@ -14,7 +14,7 @@
     function detectLang() {
         var saved = getSavedLang();
         if (SUPPORTED.indexOf(saved) !== -1) return saved;
-        return 'en';
+        return 'zh';
     }
 
     function applyLang(lang) {

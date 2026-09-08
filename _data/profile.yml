@@ -16,7 +16,7 @@ gscholar: mltwyxMAAAAJ  # This is an example, replace it with your own Google Sc
 github: Leo-bcu
 #twitter: your_twitter_id  # Do not include the '@' symbol
 wechat_qrcode: /assets/images/etc/wechat.jpg
-wechat_prompt: Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
+wechat_prompt: Please tell me your <strong>name</strong> and <strong>affiliation</strong> when adding my wechat. Thanks!
 wechat_prompt_zh: 添加微信时，请告诉我您的<strong>姓名</strong>和<strong>单位</strong>。谢谢！
 #   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
 # linkedin: your-linked-in-id
@@ -25,23 +25,28 @@ wechat_prompt_zh: 添加微信时，请告诉我您的<strong>姓名</strong>和
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
+    My research focuses on computer vision and large multimodal models; I have played a key role in leading major research initiatives and producing high-quality academic outputs. I possess strong engineering implementation skills and experience in backend development (including database management), enabling me to handle the full R&D lifecycle—from preliminary algorithm research and model compression to full-stack system development and deployment. 
   </p>
   <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
+    I demonstrate exceptional resilience under pressure and a goal-oriented mindset, having led teams to victory in competitions and secured municipal-level honors on multiple occasions. During my studies, I served as a graduate class monitor, honing excellent skills in cross-functional collaboration and interpersonal communication; I was also recognized as an "Annual Honoree" by the department's Party branch, combining a solid technical foundation with a strategic perspective on team coordination. 
+  </p>
+  <p>
+    I am currently seeking an internship in AI development or algorithm engineering to further enhance my skills and experience. If you are interested in my profile, please <a href="cv.pdf" download="Li Kaiyu_Resume_15006432013.pdf">download my resume</a>. Thank you! 
   </p>
 
 short_bio_zh: >-
   <p>
-    <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">双色猫</a>是一种由白色被毛与其他颜色被毛（例如纯黑色、虎斑色或重点色）相结合的猫。
+    研究方向为计算机视觉与多模态大模型，以核心骨干身份主导多项科研攻坚并产出高水平学术成果。具备扎实的工程落地能力及数据库等后端开发经验，能够胜任从算法预研、模型压缩到全栈系统开发与部署的全链路研发工作。
   </p>
   <p>
-    双色猫的被毛图案多种多样：从梵纹（仅头顶与尾巴有颜色）到带有喉部白斑或胸前圆斑的纯色都有。双色被毛见于许多猫的品种中，在家养长毛猫和家养短毛猫中也很常见。
+    具备极致的抗压能力与目标导向思维，多次以项目负责人身份带队参赛并斩获市级荣誉。在校期间长期担任研究生班长，具有出色的多方协同与人际沟通能力，曾获院党支部“年度表彰人物”称号，兼具扎实的技术基础与优秀的团队统筹视野。
   </p>
+  <p>
+    我正在寻找AI开发/算法实习岗，以提升我的技能和经验。如果您对我感兴趣，请<a href="cv.pdf" download="李开宇个人简介15006432013.pdf">下载简历</a>。谢谢！
+  </p>
+  
 
-portrait_url: /assets/images/photos/headshot.jpg
+portrait_url: /assets/images/photos/headshot.png
 # portrait_caption: >-
 #   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
