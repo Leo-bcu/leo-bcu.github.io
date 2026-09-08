@@ -9,7 +9,7 @@
             <ul class="navbar-nav ml-auto">
                 {% for item in site.data.navigation.pages %}
                 <li class="nav-item {% if item.name == page.navbar_title or include.active_page == item.name %}active{% endif %}">
-                    <a class="nav-link" href="{{ item.url | relative_url }}"><span data-zh="{{ item.name_zh | default: item.name }}">{{ item.name }}</span></a>
+                    <a class="nav-link" {% if item.external %}href="{{ item.url }}" target="_blank" rel="noopener noreferrer"{% else %}href="{{ item.url | relative_url }}"{% endif %}><span data-zh="{{ item.name_zh | default: item.name }}">{{ item.name }}</span></a>
                 </li>
                 {% endfor %}
                 <li class="nav-item d-flex align-items-center py-1">
