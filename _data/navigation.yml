@@ -17,5 +17,7 @@ pages:
   url: /blog
 - name: UMIS
   url: https://github.com/Leo-bcu/UMIS
+  external: true
 - name: PaperPilot
   url: https://paperpilot.fun/
+  external: true

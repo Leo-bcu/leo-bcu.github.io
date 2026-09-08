@@ -41,9 +41,9 @@ short_bio_zh: >-
     双色猫的被毛图案多种多样：从梵纹（仅头顶与尾巴有颜色）到带有喉部白斑或胸前圆斑的纯色都有。双色被毛见于许多猫的品种中，在家养长毛猫和家养短毛猫中也很常见。
   </p>
 
-portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+portrait_url: /assets/images/photos/headshot.jpg
+# portrait_caption: >-
+#   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
 - name: Beijing City University
@@ -79,6 +79,6 @@ awards:
 - name: Award Name 1 
   name_zh: 获奖名称 1
   date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
+- name: A quick brown fox jumps over the lazy dog and runs away
   name_zh: 敏捷的棕色狐狸跳过懒惰的狗并跑掉奖
   date: 2021
