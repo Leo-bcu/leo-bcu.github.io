@@ -15,7 +15,7 @@ pages:
 - name: Blog
   name_zh: 博客
   url: /blog
-  - name: UMIS
-    url: https://github.com/Leo-bcu/UMIS
-  - name: PaperPilot
-    url: https://paperpilot.fun/
+- name: UMIS
+  url: https://github.com/Leo-bcu/UMIS
+- name: PaperPilot
+  url: https://paperpilot.fun/
