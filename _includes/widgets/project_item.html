@@ -9,10 +9,16 @@
             {%- endif -%}
         </div>
         <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
+            <h5 class="mt-0 mb-1 font-weight-normal">
+                <span class="lang-en">{{ item.title }}</span>
+                <span class="lang-zh">{{ item.title_zh | default: item.title }}</span>
+            </h5>
             <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-            <p class="mt-0 mb-0 small">{{item.proj_pre}}<i>{{ item.proj }}</i>{{ item.proj_post }} {{ item.proj_date }} {{ item.proj_last }}</p>
-            <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
+            <p class="mt-0 mb-0 small">{{item.proj_pre}}<i><span class="lang-en">{{ item.proj }}</span><span class="lang-zh">{{ item.proj_zh | default: item.proj }}</span></i>{{ item.proj_post }} {{ item.proj_date }} {{ item.proj_last }}</p>
+            <p class="mt-0 mb-0 small text-muted">
+                <span class="lang-en">{{ item.abstract }}</span>
+                <span class="lang-zh">{{ item.abstract_zh | default: item.abstract }}</span>
+            </p>
             
             <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
                 {% for link in item.links %}
@@ -33,10 +39,16 @@
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
             <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
+                <h5 class="mt-0 mb-1 font-weight-normal">
+                    <span class="lang-en">{{ item.title }}</span>
+                    <span class="lang-zh">{{ item.title_zh | default: item.title }}</span>
+                </h5>
                 <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-                <p class="mt-0 mb-0 small">{{item.proj_pre}}<i>{{ item.proj }}</i>{{ item.proj_post }} {{ item.proj_date }} {{ item.proj_last }}</p>
-                <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
+                <p class="mt-0 mb-0 small">{{item.proj_pre}}<i><span class="lang-en">{{ item.proj }}</span><span class="lang-zh">{{ item.proj_zh | default: item.proj }}</span></i>{{ item.proj_post }} {{ item.proj_date }} {{ item.proj_last }}</p>
+                <p class="mt-0 mb-0 small text-muted">
+                    <span class="lang-en">{{ item.abstract }}</span>
+                    <span class="lang-zh">{{ item.abstract_zh | default: item.abstract }}</span>
+                </p>
                 
                 <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
                     {% for link in item.links %}
