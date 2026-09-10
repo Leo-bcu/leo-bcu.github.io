@@ -31,7 +31,7 @@ short_bio: >-
     I demonstrate exceptional resilience under pressure and a goal-oriented mindset, having led teams to victory in competitions and secured municipal-level honors on multiple occasions. During my studies, I served as a graduate class monitor, honing excellent skills in cross-functional collaboration and interpersonal communication; I was also recognized as an "Annual Honoree" by the department's Party branch, combining a solid technical foundation with a strategic perspective on team coordination. 
   </p>
   <p>
-    I am currently seeking an internship in AI development or algorithm engineering to further enhance my skills and experience. If you are interested in my profile, please <a href="cv.pdf" download="Li Kaiyu_Resume_15006432013.pdf">download my resume</a>. Thank you! 
+    I am currently seeking an internship in AI development or algorithm engineering to further enhance my skills and experience. If you are interested in my profile, please feel free to contact me. Thank you! 
   </p>
 
 short_bio_zh: >-
@@ -42,7 +42,7 @@ short_bio_zh: >-
     具备极致的抗压能力与目标导向思维，多次以项目负责人身份带队参赛并斩获市级荣誉。在校期间长期担任研究生班长，具有出色的多方协同与人际沟通能力，曾获院党支部“年度表彰人物”称号，兼具扎实的技术基础与优秀的团队统筹视野。
   </p>
   <p>
-    <strong>我正在寻找AI开发/算法实习岗，以提升我的技能和经验。如果您对我感兴趣，请<a href="/Users/leo/Desktop/academic-homepage/assets/file/李开宇个人简历2609.pdf" download="李开宇个人简介15006432013.pdf">下载简历</a>。谢谢！</strong>
+    <strong>我正在寻找AI开发/算法实习岗，以提升我的技能和经验。如果您对我感兴趣，欢迎与我联系。谢谢！</strong>
   </p>
   
 
@@ -78,12 +78,7 @@ education:
 #   date_zh: 2019年9月 - 2021年7月
 
 awards:
-- name: Award Name 2
-  name_zh: 获奖名称 2
-  date: 2024
-- name: Award Name 1 
-  name_zh: 获奖名称 1
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away
-  name_zh: 敏捷的棕色狐狸跳过懒惰的狗并跑掉奖
-  date: 2021
+- name: None
+  name_zh: 暂无
+  date: 2025
+
