@@ -17,4 +17,6 @@ authors:
 links:
   Code: https://github.com/Leo-bcu/PaperPilot
   WebSet: https://paperpilot.fun
+  Github Star: 40+
+  Github Fork: 10+
 ---
