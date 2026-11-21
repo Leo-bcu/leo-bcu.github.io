@@ -79,6 +79,18 @@ education:
 
 awards:
 - name: National Scholarship for Graduate Students
+  name_zh: 研究生国家奖学金
+  date: 2026
+
+- name: First-Class Graduate Scholarship
   name_zh: 研究生一等奖学金
   date: 2026
+
+- name: Third Prize, "Challenge Cup" Beijing College Students Entrepreneurship Plan Competition
+  name_zh: “青创北京”2026年“挑战杯”首都大学生创业计划竞赛三等奖
+  date: 2026
+  
+- name: First Prize, 1st Beijing Unmanned Systems Embodied Intelligence Algorithm Challenge (CICC)
+  name_zh: 北京市首届无人系统具身智能算法挑战赛一等奖（中国指挥与控制学会）
+  date: 2025
 
